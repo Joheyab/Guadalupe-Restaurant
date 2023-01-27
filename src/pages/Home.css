@@ -1,5 +1,5 @@
 .first-container {
-  background-image: url("src/images/restaurant.webp");
+  background-image: url("/images/restaurant.webp");
   background-position: center;
   background-size: cover;
   height: 500px;
@@ -77,7 +77,7 @@
     justify-content: center;
 }
 .description-vegetables{
-    background-image: url("src/images/description-vegetables.webp");
+    background-image: url("/images/description-vegetables.webp");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;

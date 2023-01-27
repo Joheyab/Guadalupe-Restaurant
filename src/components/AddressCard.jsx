@@ -12,7 +12,7 @@ export function AddressCard({
     <>
       <div className="address-card">
         <h1>Address</h1>
-        <img src="public\images\Google_Maps.webp" className="address-logo"></img>
+        <img src="images\Google_Maps.webp" className="address-logo"></img>
         <div className="address">
           <span>{`Phone number: (208) ${phone}`}</span>
           <span>{`Street: ${street}`}</span>
