@@ -12,7 +12,7 @@ export function NavBar() {
         <nav className="navbar">
             <NavLink to="/" className="logo-container">
             <img
-              src="public\images\restaurant-logo.png"
+              src="images\restaurant-logo.png"
               alt="restaurant-logo"
             ></img>
             <h2>Guadalupe´s Restaurant</h2>
