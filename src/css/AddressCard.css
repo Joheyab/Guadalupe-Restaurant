@@ -1,0 +1,25 @@
+.address-card{
+    height: 530px;
+    width: 600px;
+    background-color: #233329;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.938);
+    max-width: 320px;
+    margin-bottom: 100px ;
+    display: flex;
+    flex-direction: column;
+    font-family: "Lobster", cursive;
+    font-size: 18px;
+    text-align: center;
+    gap: 8px;
+    color: #fff;
+  }
+  
+  .address-card img{
+    height: 200px;
+  }
+  
+  .address{
+    display: flex;
+    flex-direction: column;
+    
+  }

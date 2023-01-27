@@ -1,0 +1,40 @@
+#error-page{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+#error-page h1{
+    font-size: 80px;
+}
+
+#error-page p{
+    font-size: 30px;
+}
+
+#error-page i{
+    font-size: 20px;
+    opacity: 0.6;
+}
+#error-page li{
+    list-style: none;
+}
+.back-home-button{
+    background-color: #233329;
+    text-decoration: none;
+    width: 100px;
+    border-radius: 4px;
+    padding: 8px 16px;
+    color: #fff;
+    font-size: 18px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.678);
+    cursor: pointer;
+}
+
+.back-home-button:hover{
+    background-color: #63a46c;
+    transition: 0.5s ease-in-out;
+}

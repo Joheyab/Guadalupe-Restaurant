@@ -1,0 +1,111 @@
+.first-container {
+  background-image: url("src/images/restaurant.webp");
+  background-position: center;
+  background-size: cover;
+  height: 500px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Lobster", cursive;
+  font-size: 24px;
+}
+
+.first-container::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.521);
+  position: absolute;
+  height: 500px;
+  width: 100%;
+}
+
+.first-container h2 {
+  position: relative;
+  color: #ffffff;
+  font-size: 34px;
+  line-height: 0.9;
+}
+.first-container h1 {
+  position: relative;
+  color: #ffffff;
+  font-size: 34px;
+  line-height: 0.9;
+}
+.second-container {
+  text-align: center;
+  height: 550px;
+  font-family: "Lobster", cursive;
+}
+
+.second-container h1{
+    font-size: 34px;
+    margin-top: 70px;
+    color: #233329;
+}
+.slider {
+  height: 500px;
+  margin-bottom: 40px;
+}
+
+.react-multi-carousel-track:first-child{
+    margin-left: 70px;
+}
+
+
+.button-view-menu{
+    background-color: #233329;
+    border-radius: 4px;
+    padding: 8px 16px;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.678);
+    cursor: pointer;
+}
+
+.button-view-menu:hover{
+    background-color: #63a46c;
+    transition: 0.5s ease-in-out;
+}
+
+.third-container{
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.description-vegetables{
+    background-image: url("src/images/description-vegetables.webp");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 65%;
+    width: 785px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Lobster", cursive;
+    font-size: 24px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.938);
+}
+
+.description-vegetables h1{
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    left: 25%;
+    color: #233329;
+}
+
+.fourth-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 750px;
+}
+
+
+

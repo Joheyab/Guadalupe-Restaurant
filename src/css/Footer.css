@@ -1,0 +1,15 @@
+footer {
+    background-color: black;
+    margin-top: auto;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  footer svg {
+    cursor: pointer;
+  }
