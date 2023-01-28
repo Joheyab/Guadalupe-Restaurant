@@ -28,6 +28,21 @@ aside{
     align-items: center;
     text-align: center;
 }
+
+.category-filters{
+    display: flex;
+    flex-direction: column;
+}
+
+.category-filters ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.category-filters li{
+    display: flex;
+}
 .container-close-filter-button{
     height: 100%;
     display: flex;

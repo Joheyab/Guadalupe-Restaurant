@@ -19,14 +19,42 @@ export function SideBar() {
             <div className="filter-menu">
               <span>Filters</span>
               <span>Categories:</span>
-              <ul>
-                <li>Rices</li>
-                <li>Pastas</li>
-                <li>Hamburgers</li>
-                <li>Sandwiches</li>
-                <li>Drinks</li>
-                <li>Desserts</li>
-              </ul>
+              <div className="category-filters">
+                <ul>
+                  <li>
+                    <span>All</span>
+                    <input type="radio" name="category" value="All"/>
+                  </li>
+                  <li>
+                    <span>Rices</span>
+                  <input type="radio" name="category"/>
+                  </li>
+                  <li>
+                    <span>Salads</span>
+                    <input type="radio" name="category"/>
+                  </li>
+                  <li>
+                    <span>Pastas</span>
+                    <input type="radio" name="category"/>
+                  </li>
+                  <li>
+                    <span>Hamburgers</span>
+                    <input type="radio" name="category"/>
+                  </li>
+                  <li>
+                    <span>Sandwiches</span>
+                    <input type="radio" name="category"/>
+                  </li>
+                  <li>
+                    <span>Desserts</span>
+                    <input type="radio" name="category"/>
+                  </li>
+                  <li>
+                    <span>Drinks</span>
+                    <input type="radio" name="category"/>
+                  </li>
+                </ul>
+              </div>
             </div>
           </>
         )}
