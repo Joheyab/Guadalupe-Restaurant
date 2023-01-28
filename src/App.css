@@ -30,3 +30,7 @@ body{
 ::-webkit-scrollbar-thumb:hover {
   background: #426b47; 
 }
+
+header{
+  height: 8%;
+}

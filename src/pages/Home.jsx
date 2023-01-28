@@ -84,7 +84,7 @@ export function Home() {
         <section className="third-container">
           <div className="description-vegetables">
             <h1>
-              Our recipes always have fresh ingredients and we made it with love
+              Our recipes always have fresh ingredients and are made with love
               for our customers.
             </h1>
           </div>

@@ -1,0 +1,32 @@
+.menu-container {
+  display: flex;
+  font-family: "Lobster", cursive;
+  height: 86%;
+  margin-bottom: 50px;
+}
+
+.dishes-menu-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  width: 79%;
+  gap: 20px;
+  padding: 30px 0px 50px 30px;
+  box-shadow: 23px 10px 30px -1px rgba(0,0,0,0.75);
+-webkit-box-shadow: 23px 10px 30px -1px rgba(0,0,0,0.75);
+-moz-box-shadow: 23px 10px 30px -1px rgba(0,0,0,0.75);
+  background-color: #233329;
+  margin-top: 40px;
+  z-index: 10;
+}
+
+.dishes-menu-container::-webkit-scrollbar-thumb {
+    background: #000;
+    border-radius: 0px;
+    padding-top: 50px;
+  }
+  .dishes-menu-container::-webkit-scrollbar-track-piece{
+    margin-top: 50px;
+    padding-top: 50px;
+  }

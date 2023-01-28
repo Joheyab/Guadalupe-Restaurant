@@ -15,6 +15,7 @@ aside{
 .sideBar{
     height: 100%;
     width: 200px;
+    padding-bottom: 50px;
     background-color: #63a46c;
     animation: fadeIn 2s;
     display: flex;
@@ -62,7 +63,7 @@ aside{
     background-color: #63a46c;
     position: absolute;
     border-radius: 8px;
-    border: 8px solid #fff;
+    border: 8px solid #233329;
     padding: 8px 16px;
     margin-left: -112px;
     color: #fff;
