@@ -1,0 +1,59 @@
+[
+    {   
+        "ID": 1,
+        "Image": "dish_1.webp",
+        "Category": "Rices",
+        "Price": 8.99,
+        "Description": "Rice with zucchini, soft-boiled egg and parsley"
+    },
+    {
+        "ID": 2,
+        "Image": "dish_2.webp",
+        "Category": "Salads",
+        "Price": 7.99,
+        "Description": "Lettuce, tomato, cheese and chicken"
+    },
+    {
+        "ID": 3,
+        "Image": "drink_1.webp",
+        "Category": "Drinks",
+        "Price": 3.00,
+        "Description": "Batido de fresa en leche"
+    },
+    {
+        "ID": 4,
+        "Image": "dish_3.webp",
+        "Category": "Pastas",
+        "Price": 8.50,
+        "Description": "RAMEN"
+    },
+    {
+        "ID": 5,
+        "Image": "dish_4.webp",
+        "Category": "Hamburgers",
+        "Price": 6,
+        "Description": "adadqdqw"
+    }
+    ,
+    {
+        "ID": 6,
+        "Image": "dish_5.webp",
+        "Category": "Sandwiches",
+        "Price": 5.50,
+        "Description": "adasddaaqd"
+    },
+    {
+        "ID": 7,
+        "Image": "dish_6.webp",
+        "Category": "Others",
+        "Price": 5.50,
+        "Description": "Chicken tenders"
+    },
+    {
+        "ID": 8,
+        "Image": "dish_7.webp",
+        "Category": "Desserts",
+        "Price": 3.25,
+        "Description": "asdasqfqaefQ"
+    }
+]

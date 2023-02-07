@@ -6,7 +6,7 @@ export function DishCard({imagen, category, price, description}){
               <img src={`/images/${imagen}`} className="dish-image"></img>
               <span>{`Category: ${category}`}</span>
               <span>{`${description}`}</span>
-              <strong>{price}</strong>
+              <strong>${price}</strong>
         </div>
         </>
     )
