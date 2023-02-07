@@ -157,7 +157,7 @@ export function SideBar(props) {
               </div>
               <button
                 className="search-button-filters"
-                onClick={()=>{props.getPriceFilter(priceSelected); props.getCategoryFilter(categorySelected); props.search()}}
+                onClick={()=>{props.getPriceFilter(priceSelected); props.getCategoryFilter(categorySelected)}}
               >
                 Search
               </button>
