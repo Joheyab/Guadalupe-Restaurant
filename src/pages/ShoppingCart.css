@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: row;
   width: 55%;
-  height: auto;
+  height: 80%;
   margin-top: 80px;
   margin-left: 450px;
   margin-right: 100px;
@@ -19,8 +19,17 @@
   box-shadow: 7px 1px 5px -2px rgba(0, 0, 0, 0.43);
   -webkit-box-shadow: 7px 1px 5px -2px rgba(0, 0, 0, 0.43);
   -moz-box-shadow: 7px 1px 5px -2px rgba(0, 0, 0, 0.43);
+  overflow-y: auto;
+  position: relative;
 }
 
+.left-container::-webkit-scrollbar-thumb {
+    background: #233329;
+    border-radius: 0px;
+  }
+  .left-container::-webkit-scrollbar-track-piece{
+    margin-top: 120px;
+  }
 .header-shopping-cart-container {
   display: flex;
   text-align: center;
@@ -41,6 +50,9 @@
     flex-direction: column;
     gap: 20px;
     padding: 40px;
+    padding-bottom: 0;
+    position: absolute;
+    width: 88%;
 }
 
 .dishes-card-shopping-cart{
@@ -166,19 +178,38 @@
     gap: 10px;
     margin-bottom: 40px;
 }
-.province input{
-    height: 26px;
+.province button{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    height: 34px;
     border: none;
     padding: 4px 8px;
     background-color: #63a46c;
     border-radius: 4px;
     color: #fff;
     font-family: "Lobster", cursive;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
 }
-
-.province input::placeholder{
-    color:#fff;
-    opacity: 0.8;
+.province label{
+    font-size: 18px;
+}
+.options-province{
+    position: absolute;
+    z-index: 1;
+    border: 1px solid black;
+    border-bottom: 0px;
+}
+.options-province button{
+    width: 100px;
+    border-radius: 0px;
+    border-bottom: 1px solid black;
+}
+.options-province button:hover{
+    background-color: #233329;
 }
 .discount{
     display: flex;
@@ -195,8 +226,12 @@
     border-radius: 4px;
     color: #fff;
     font-family: "Lobster", cursive;
+    font-size: 16px;
 }
 
+.discount label{
+    font-size: 18px;
+}
 .discount input::placeholder{
     color:#fff;
     opacity: 0.8;
@@ -222,6 +257,9 @@
     bottom: 30px;
 }
 
+.total-price span{
+    font-size: 18px;
+}
 .checkout-button{
     border: none;
     padding: 12px;
@@ -233,3 +271,13 @@
     font-family: "Lobster", cursive;
     cursor: pointer;
 }
+
+
+
+
+
+
+
+
+
+

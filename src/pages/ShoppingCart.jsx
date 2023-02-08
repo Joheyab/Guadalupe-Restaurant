@@ -1,8 +1,16 @@
 import { Footer } from "../components/Footer";
 import { NavBar } from "../components/NavBar";
-import { MdDelete } from "react-icons/md"
+import { MdDelete } from "react-icons/md";
+import { BsCaretDownFill } from "react-icons/bs";
 import "./ShoppingCart.css";
+import { useState } from "react";
+import { DishCardSophhingCart } from "../components/DishCardShoppingCart";
 export function ShoppingCart() {
+  const [amountItems, setAmountItems] = useState(2);
+  const [preTotalPrice, setPreTotalPrice] = useState(9);
+  const [totalPrice, setTotalPrice] = useState(0);
+  const [showOptions, setShowOptions] = useState(false);
+  const [provinceSelect, setProvinceSelect] = useState("Select your province");
   return (
     <>
       <NavBar />
@@ -11,47 +19,18 @@ export function ShoppingCart() {
           <div className="left-container">
             <div className="header-shopping-cart-container">
               <h2>Shopping Cart</h2>
-              <span>3 items</span>
+              <span>{amountItems} items</span>
             </div>
             <div className="dishes-shopping-container">
-              <div className="dishes-card-shopping-cart">
-                <img
-                  src={`/images/dish_1.webp`}
-                  className="dish-image-shopping"
-                ></img>
-                <div className="information-dish-card-shopping">
-                  <span className="name-span">Name</span>
-                  <span className="name-dish-span">Rice</span>
-                </div>
-                <div className="buttons-shopping-cart">
-                  <button className="decrement-button-shopping">-</button>
-                  <span>2</span>
-                  <button className="increment-button-shopping">+</button>
-                </div>
-                <span className="price-dish-card-shopping">$10</span>
-                <button className="delete-button">
-                  <MdDelete />
-                </button>
-              </div>
-              <div className="dishes-card-shopping-cart">
-                <img
-                  src={`/images/dish_2.webp`}
-                  className="dish-image-shopping"
-                ></img>
-                <div className="information-dish-card-shopping">
-                  <span className="name-span">Name</span>
-                  <span className="name-dish-span">Salad fhasddfashndasd</span>
-                </div>
-                <div className="buttons-shopping-cart">
-                  <button className="decrement-button-shopping">-</button>
-                  <span>1</span>
-                  <button className="increment-button-shopping">+</button>
-                </div>
-                <span className="price-dish-card-shopping">$5</span>
-                <button className="delete-button">
-                  <MdDelete />
-                </button>
-              </div>
+              <DishCardSophhingCart
+                image="dish_1.webp"
+                name="Rice"
+                price={4.5}
+                updateAmountItems={setAmountItems}
+                amountItems={amountItems}
+                preTotalPrice={preTotalPrice}
+                setPreTotalPrice={setPreTotalPrice}
+              />
             </div>
           </div>
           <div className="right-container">
@@ -59,12 +38,90 @@ export function ShoppingCart() {
               <h3>Summary</h3>
             </div>
             <div className="summary-items-price">
-              <span>Items 3</span>
-              <span>$20</span>
+              <span>Items {amountItems}</span>
+              <span>${preTotalPrice}</span>
             </div>
             <div className="province">
               <label>Province</label>
-              <input type="text" placeholder="Select your province"></input>
+              <div>
+                <button
+                  onClick={() =>
+                    showOptions ? setShowOptions(false) : setShowOptions(true)
+                  }
+                >
+                  <span>{provinceSelect}</span>
+                  <BsCaretDownFill />
+                </button>
+                {showOptions ? (
+                  <div className="options-province">
+                    <button
+                      onClick={() => {
+                        setProvinceSelect("San José");
+                        setPreTotalPrice(preTotalPrice + 0.50);
+                        setShowOptions(false);
+                      }}
+                    >
+                      San José
+                    </button>
+                    <button
+                      onClick={() => {
+                        setProvinceSelect("Cartago");
+                        setPreTotalPrice(preTotalPrice + 0.60);
+                        setShowOptions(false);
+                      }}
+                    >
+                      Cartago
+                    </button>
+                    <button
+                      onClick={() => {
+                        setProvinceSelect("Heredia");
+                        setPreTotalPrice(preTotalPrice + 0.70);
+                        setShowOptions(false);
+                      }}
+                    >
+                      Heredia
+                    </button>
+                    <button
+                      onClick={() => {
+                        setProvinceSelect("Alajuela");
+                        setPreTotalPrice(preTotalPrice + 0.80);
+                        setShowOptions(false);
+                      }}
+                    >
+                      Alajuela
+                    </button>
+                    <button
+                      onClick={() => {
+                        setProvinceSelect("Guanacaste");
+                        setPreTotalPrice(preTotalPrice + 1.20);
+                        setShowOptions(false);
+                      }}
+                    >
+                      Guanacaste
+                    </button>
+                    <button
+                      onClick={() => {
+                        setProvinceSelect("Puntarenas");
+                        setPreTotalPrice(preTotalPrice + 1.40);
+                        setShowOptions(false);
+                      }}
+                    >
+                      Puntarenas
+                    </button>
+                    <button
+                      onClick={() => {
+                        setProvinceSelect("Limón");
+                        setPreTotalPrice(preTotalPrice + 1.60);
+                        setShowOptions(false);
+                      }}
+                    >
+                      Limón
+                    </button>
+                  </div>
+                ) : (
+                  <></>
+                )}
+              </div>
             </div>
             <div className="discount">
               <label>Discount Code</label>
@@ -73,7 +130,7 @@ export function ShoppingCart() {
             <div className="footer-checkout-container">
               <div className="total-price">
                 <span>Total Price</span>
-                <span>$35</span>
+                <span>${totalPrice}</span>
               </div>
               <button className="checkout-button">Checkout</button>
             </div>
