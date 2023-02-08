@@ -1,6 +1,7 @@
 [
     {   
         "ID": 1,
+        "Name": "Rice Zuchinn",
         "Image": "dish_1.webp",
         "Category": "Rices",
         "Price": 8.99,
@@ -8,6 +9,7 @@
     },
     {
         "ID": 2,
+        "Name": "Salad 24",
         "Image": "dish_2.webp",
         "Category": "Salads",
         "Price": 7.99,
@@ -15,6 +17,7 @@
     },
     {
         "ID": 3,
+        "Name":" Strawberry Milkshake",
         "Image": "drink_1.webp",
         "Category": "Drinks",
         "Price": 3.00,
@@ -22,6 +25,7 @@
     },
     {
         "ID": 4,
+        "Name": "Ramen Chef",
         "Image": "dish_3.webp",
         "Category": "Pastas",
         "Price": 8.50,
@@ -29,6 +33,7 @@
     },
     {
         "ID": 5,
+        "Name": "Hamburguer Special",
         "Image": "dish_4.webp",
         "Category": "Hamburgers",
         "Price": 6,
@@ -37,6 +42,7 @@
     ,
     {
         "ID": 6,
+        "Name": "Sub Sandwich",
         "Image": "dish_5.webp",
         "Category": "Sandwiches",
         "Price": 5.50,
@@ -44,16 +50,74 @@
     },
     {
         "ID": 7,
-        "Image": "dish_6.webp",
-        "Category": "Others",
-        "Price": 5.50,
-        "Description": "Chicken tenders"
-    },
-    {
-        "ID": 8,
+        "Name": "Chocolate cake 01",
         "Image": "dish_7.webp",
         "Category": "Desserts",
         "Price": 3.25,
         "Description": "asdasqfqaefQ"
+    },
+    {
+        "ID": 8,
+        "Name": "Salad Guads",
+        "Image": "dish_8.webp",
+        "Category": "Salads",
+        "Price": 3,
+        "Description": "Guadalupe style cabbage, egg, cucumber and carrot"
+    },
+    {
+        "ID": 9,
+        "Name": "Basic Salad",
+        "Image": "dish_9.webp",
+        "Category": "Salads",
+        "Price": 1.5,
+        "Description": "Broccoli and carrot with a little special seasoning on top"
+    },
+    {
+        "ID": 10,
+        "Name": "Rice with shrimp",
+        "Image": "dish_10.webp",
+        "Category": "Rices",
+        "Price": 5,
+        "Description": "Fresh rice with sautéed Pacific shrimp"
+    },
+    {
+        "ID": 11,
+        "Name": "Paella",
+        "Image": "dish_11.webp",
+        "Category": "Rices",
+        "Price": 12.5,
+        "Description": "Traditional Rice Paella Spanish familiar dish (4 people)"
+    },
+    {
+        "ID": 12,
+        "Name": "Coca Cola",
+        "Image": "drink_2.webp",
+        "Category": "Drinks",
+        "Price": 2,
+        "Description": "Common Natural 665ml"
+    },
+    {
+        "ID": 13,
+        "Name": "Coca Cola Zero",
+        "Image": "drink_3.webp",
+        "Category": "Drinks",
+        "Price": 2,
+        "Description": "Sugar free Coca Cola "
+    },
+    {
+        "ID": 14,
+        "Name": "Margarita",
+        "Image": "drink_4.webp",
+        "Category": "Drinks",
+        "Price": 4.35,
+        "Description": "Alcoholic drink"
+    },
+    {
+        "ID": 15,
+        "Name": "Corona",
+        "Image": "drink_5.webp",
+        "Category": "Drinks",
+        "Price": 3,
+        "Description": "Mexican Beer"
     }
 ]

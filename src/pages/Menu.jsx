@@ -24,7 +24,7 @@ export function Menu() {
   }
   useEffect(() => {
     getData();
-  }, []);
+  }, [data]);
 
   return (
     <>
@@ -39,6 +39,7 @@ export function Menu() {
             ? data.map((item) => (
                 <DishCard
                   imagen={item.Image}
+                  name={item.Name}
                   category={item.Category}
                   description={item.Description}
                   price={item.Price}
@@ -50,6 +51,7 @@ export function Menu() {
                 .map((dish) => (
                   <DishCard
                     imagen={dish.Image}
+                    name={dish.Name}
                     category={dish.Category}
                     description={dish.Description}
                     price={dish.Price}
@@ -58,6 +60,7 @@ export function Menu() {
                 )) : priceFilter === "1" ? data.filter((item) =>item.Category === categoryFilter && item.Price >= 0 && item.Price <=4).map((dish) => (
                   <DishCard
                     imagen={dish.Image}
+                    name={dish.Name}
                     category={dish.Category}
                     description={dish.Description}
                     price={dish.Price}
@@ -66,6 +69,7 @@ export function Menu() {
                 priceFilter === "2" ? data.filter((item) =>item.Category === categoryFilter && item.Price >= 4 && item.Price <=8).map((dish) => (
                   <DishCard
                     imagen={dish.Image}
+                    name={dish.Name}
                     category={dish.Category}
                     description={dish.Description}
                     price={dish.Price}
@@ -73,6 +77,7 @@ export function Menu() {
                   />)): priceFilter === "3" ? data.filter((item) =>item.Category === categoryFilter && item.Price >= 8 && item.Price <=12).map((dish) => (
                     <DishCard
                       imagen={dish.Image}
+                      name={dish.Name}
                       category={dish.Category}
                       description={dish.Description}
                       price={dish.Price}
@@ -80,6 +85,7 @@ export function Menu() {
                     />)): data.filter((item) =>item.Category === categoryFilter && item.Price >= 12).map((dish) => (
                       <DishCard
                         imagen={dish.Image}
+                        name={dish.Name}
                         category={dish.Category}
                         description={dish.Description}
                         price={dish.Price}

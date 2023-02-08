@@ -7,18 +7,33 @@
     margin: 16px;
     display: flex;
     flex-direction: column;
-    text-align: center;
     gap: 8px;
     color: #fff;
     box-sizing: border-box;
+    position: relative;
   }
   
-  .dish-card span {
+  .information-dish-card{
+   display: grid;
+    text-align: center;
+    gap: 4px
+  }
+  .information-dish-card span {
     font-size: 24px;
   }
+
+  .name-dish::before{
+    content: "Name: ";
+    color:#63a46c;
+  }
   
-  .dish-card strong {
+  .category-dish::before{
+    content: "Category: ";
+    color: #63a46c;
+  }
+  .information-dish-card strong {
     font-size: 18px;
+    color: #63a46c;
   }
   .dish-image {
     width: 100%;
@@ -29,4 +44,81 @@
   .dish-card:hover {
     transform: scale(1.05, 1.05);
     transition: 0.3s ease-in-out;
+  }
+
+  .dish-card:hover img{
+    opacity: 0.5;
+    transition: 0.3s ease-in-out;
+  }
+
+  .dish-card:hover button{
+    opacity: 1;
+    transition: 0.3s ease-in-out;
+  }
+
+  .dish-card:hover span{
+    opacity: 1;
+  }
+  .form-add-dish{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 100px;
+    top: 120px;
+    
+  }
+  .buttons-form{
+    right: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    font-family: "Lobster", cursive;
+  }
+  .decrement{
+    font-size: 18px;
+    text-transform: uppercase;
+    background-color: #b42b2b;
+    color: #fff;
+    border: 2px solid #233329;
+    border-radius: 4px;
+    padding: 4px 14px;
+    margin-top: 8px;
+    cursor: pointer;
+    opacity: 0;
+    box-sizing: border-box;
+  }
+  .buttons-form span{
+    opacity: 0;
+  }
+
+  .increment{
+    font-size: 18px;
+    text-transform: uppercase;
+    background-color: #2bb43d;
+    color: #fff;
+    border: 2px solid #233329;
+    border-radius: 4px;
+    padding: 4px 14px;
+    margin-top: 8px;
+    cursor: pointer;
+    opacity: 0;
+    box-sizing: border-box;
+  }
+  .add-button{
+    font-size: 18px;
+    text-transform: uppercase;
+    background-color: #2bb43d;
+    color: #fff;
+    border: 2px solid #233329;
+    overflow: hidden;
+    border-radius: 4px;
+    padding: 4px 14px;
+    margin-top: 8px;
+    cursor: pointer;
+    opacity: 0;
+    font-family: "Lobster", cursive;
+    box-sizing: border-box;
   }
