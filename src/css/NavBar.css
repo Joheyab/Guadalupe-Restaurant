@@ -61,6 +61,13 @@
   display: none;
 }
 
+.App{
+  width: auto;
+}
+
+header{
+  width: 100%;
+}
 @media only screen and (max-width: 480px) {
   .logo-container {
     width: auto;
@@ -141,6 +148,5 @@
   }
   .navbar{
     justify-content: center;
-    width: 100vw;
   }
 }
