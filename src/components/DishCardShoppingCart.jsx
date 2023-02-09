@@ -6,10 +6,13 @@ export function DishCardSophhingCart({
   price,
   updateAmountItems,
   amountItems,
+  amount,
   setPreTotalPrice,
   preTotalPrice,
+  setTotalPrice,
+  totalPrice
 }) {
-  const [amountDish, setAmountDish] = useState(2);
+  const [amountDish, setAmountDish] = useState(amount);
   const [print, setPrint] = useState(true);
   const verifyPrint = () => {
     amountDish === 1 ? setPrint(false) : null;
@@ -18,12 +21,14 @@ export function DishCardSophhingCart({
     setAmountDish(amountDish + 1);
     updateAmountItems(amountItems + 1);
     setPreTotalPrice(preTotalPrice + price);
+    setTotalPrice(totalPrice + price)
   };
 
   const handleDecrement = () => {
     amountDish >= 1 ? setAmountDish(amountDish - 1) : null;
     amountItems != 0 ? updateAmountItems(amountItems - 1) : null;
     setPreTotalPrice(preTotalPrice - price);
+    setTotalPrice(totalPrice - price)
     verifyPrint();
   };
   return (
@@ -59,6 +64,7 @@ export function DishCardSophhingCart({
               setPrint(false);
               updateAmountItems(amountItems - amountDish);
               setPreTotalPrice(preTotalPrice - price * amountDish);
+              setTotalPrice(totalPrice - price * amountDish)
             }}
           >
             <MdDelete />

@@ -3,14 +3,38 @@ import { NavBar } from "../components/NavBar";
 import { MdDelete } from "react-icons/md";
 import { BsCaretDownFill } from "react-icons/bs";
 import "./ShoppingCart.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { DishCardSophhingCart } from "../components/DishCardShoppingCart";
 export function ShoppingCart() {
-  const [amountItems, setAmountItems] = useState(2);
-  const [preTotalPrice, setPreTotalPrice] = useState(9);
-  const [totalPrice, setTotalPrice] = useState(0);
+  const [amountItems, setAmountItems] = useState(3);
+  const [preTotalPrice, setPreTotalPrice] = useState(19.98);
+  const [totalPrice, setTotalPrice] = useState(preTotalPrice);
   const [showOptions, setShowOptions] = useState(false);
-  const [provinceSelect, setProvinceSelect] = useState("Select your province");
+  const [provinceSelect, setProvinceSelect] = useState(["Select your province", 0]);
+  const [discountCode, setDiscountCode] = useState('')
+  const [appDiscounts, setAppDiscounts] = useState([])
+  const [showError, setShowError] = useState(false)
+  const getDiscounts = () =>{
+    fetch("./DiscountCodes.json", {
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    })
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (myJson) {
+        setAppDiscounts(myJson);
+      });
+  }
+  const verifyDiscount = () =>{
+   appDiscounts.filter((item)=> item.Code === discountCode ? (setTotalPrice(totalPrice -(item.Discount*totalPrice/100)), setShowError(false), retrurn)   : setShowError(true))
+  }
+
+  useEffect(() => {
+    getDiscounts();
+  }, []);
   return (
     <>
       <NavBar />
@@ -24,12 +48,27 @@ export function ShoppingCart() {
             <div className="dishes-shopping-container">
               <DishCardSophhingCart
                 image="dish_1.webp"
-                name="Rice"
-                price={4.5}
+                name="Rice Zuchin"
+                price={8.99}
                 updateAmountItems={setAmountItems}
+                amount={2}
                 amountItems={amountItems}
                 preTotalPrice={preTotalPrice}
                 setPreTotalPrice={setPreTotalPrice}
+                setTotalPrice={setTotalPrice}
+                totalPrice={totalPrice}
+              />
+              <DishCardSophhingCart
+                image="drink_2.webp"
+                name="Coca Cola"
+                price={2}
+                updateAmountItems={setAmountItems}
+                amount={1}
+                amountItems={amountItems}
+                preTotalPrice={preTotalPrice}
+                setPreTotalPrice={setPreTotalPrice}
+                setTotalPrice={setTotalPrice}
+                totalPrice={totalPrice}
               />
             </div>
           </div>
@@ -39,7 +78,7 @@ export function ShoppingCart() {
             </div>
             <div className="summary-items-price">
               <span>Items {amountItems}</span>
-              <span>${preTotalPrice}</span>
+              <span>${preTotalPrice.toFixed(2)}</span>
             </div>
             <div className="province">
               <label>Province</label>
@@ -49,15 +88,15 @@ export function ShoppingCart() {
                     showOptions ? setShowOptions(false) : setShowOptions(true)
                   }
                 >
-                  <span>{provinceSelect}</span>
+                  <span>{provinceSelect[0]}</span>
                   <BsCaretDownFill />
                 </button>
                 {showOptions ? (
                   <div className="options-province">
                     <button
                       onClick={() => {
-                        setProvinceSelect("San José");
-                        setPreTotalPrice(preTotalPrice + 0.50);
+                        setProvinceSelect(["San José", 0.40]);
+                        setTotalPrice(totalPrice - provinceSelect[1] + 0.40);
                         setShowOptions(false);
                       }}
                     >
@@ -65,8 +104,8 @@ export function ShoppingCart() {
                     </button>
                     <button
                       onClick={() => {
-                        setProvinceSelect("Cartago");
-                        setPreTotalPrice(preTotalPrice + 0.60);
+                        setProvinceSelect(["Cartago", 0.60]);
+                        setTotalPrice(totalPrice - provinceSelect[1] + 0.60);
                         setShowOptions(false);
                       }}
                     >
@@ -74,8 +113,8 @@ export function ShoppingCart() {
                     </button>
                     <button
                       onClick={() => {
-                        setProvinceSelect("Heredia");
-                        setPreTotalPrice(preTotalPrice + 0.70);
+                        setProvinceSelect(["Heredia",0.70]);
+                        setTotalPrice(totalPrice - provinceSelect[1] + 0.70);
                         setShowOptions(false);
                       }}
                     >
@@ -83,8 +122,8 @@ export function ShoppingCart() {
                     </button>
                     <button
                       onClick={() => {
-                        setProvinceSelect("Alajuela");
-                        setPreTotalPrice(preTotalPrice + 0.80);
+                        setProvinceSelect(["Alajuela", 0.80]);
+                        setTotalPrice(totalPrice - provinceSelect[1] + 0.80);
                         setShowOptions(false);
                       }}
                     >
@@ -92,8 +131,8 @@ export function ShoppingCart() {
                     </button>
                     <button
                       onClick={() => {
-                        setProvinceSelect("Guanacaste");
-                        setPreTotalPrice(preTotalPrice + 1.20);
+                        setProvinceSelect(["Guanacaste", 1.20]);
+                        setTotalPrice(totalPrice - provinceSelect[1] + 1.20);
                         setShowOptions(false);
                       }}
                     >
@@ -101,8 +140,8 @@ export function ShoppingCart() {
                     </button>
                     <button
                       onClick={() => {
-                        setProvinceSelect("Puntarenas");
-                        setPreTotalPrice(preTotalPrice + 1.40);
+                        setProvinceSelect(["Puntarenas", 1.40]);
+                        setTotalPrice(totalPrice - provinceSelect[1] + 1.40);
                         setShowOptions(false);
                       }}
                     >
@@ -110,8 +149,8 @@ export function ShoppingCart() {
                     </button>
                     <button
                       onClick={() => {
-                        setProvinceSelect("Limón");
-                        setPreTotalPrice(preTotalPrice + 1.60);
+                        setProvinceSelect(["Limón",1.60]);
+                        setTotalPrice(totalPrice - provinceSelect[1] + 1.60);
                         setShowOptions(false);
                       }}
                     >
@@ -125,12 +164,18 @@ export function ShoppingCart() {
             </div>
             <div className="discount">
               <label>Discount Code</label>
-              <input type="text" placeholder="Write your discount code"></input>
+              <input value={discountCode} placeholder="Write your discount code" onChange={e=> setDiscountCode(e.target.value)
+              }></input>
+              <div className="verify-code">
+                {showError ? <span className="error-code">Error code. Please enter a correct code</span>: null}
+                
+                <button className="verify-code-button" onClick={()=> verifyDiscount()}>Verify Code</button>
+              </div>
             </div>
             <div className="footer-checkout-container">
               <div className="total-price">
                 <span>Total Price</span>
-                <span>${totalPrice}</span>
+                <span>${totalPrice.toFixed(2)}</span>
               </div>
               <button className="checkout-button">Checkout</button>
             </div>
