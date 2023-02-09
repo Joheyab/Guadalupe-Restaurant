@@ -32,9 +32,6 @@
   }
 
   @media only screen and (max-width: 1600px) {
-    body{
-      background-color: red;
-    }
     .dishes-menu-container{
       width: 1120px;
     }
@@ -42,9 +39,6 @@
 
 
   @media only screen and (max-width: 1400px) {
-    body{
-      background-color: aqua;
-    }
     .dishes-menu-container{
       width: 760px;
     }
@@ -57,4 +51,9 @@
     .dishes-menu-container{
       width: 460px;
     }
+
+    .App{
+      width: 100%;
+    }
   }
+  2.5 5.3
