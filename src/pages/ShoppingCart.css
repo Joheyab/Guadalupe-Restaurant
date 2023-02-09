@@ -386,6 +386,10 @@
     margin-right: 20px;
     margin-bottom: 20px;
     }
+    .verify-code-button{
+        width: auto;
+        height: auto;
+    }
   }
 
 
