@@ -38,7 +38,7 @@ export function ShoppingCart() {
   return (
     <>
       <NavBar />
-      <main>
+      <main className="general-shopping-container">
         <div className="shopping-cart-container">
           <div className="left-container">
             <div className="header-shopping-cart-container">
@@ -61,7 +61,7 @@ export function ShoppingCart() {
               <DishCardSophhingCart
                 image="drink_2.webp"
                 name="Coca Cola"
-                price={2}
+                price={2.00}
                 updateAmountItems={setAmountItems}
                 amount={1}
                 amountItems={amountItems}

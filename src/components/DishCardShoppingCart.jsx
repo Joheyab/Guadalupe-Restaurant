@@ -31,6 +31,10 @@ export function DishCardSophhingCart({
     setTotalPrice(totalPrice - price)
     verifyPrint();
   };
+
+  const calcular =() =>{
+    return "$" + (amountDish * price).toFixed(2)
+  }
   return (
     <>
       {print ? (
@@ -56,7 +60,7 @@ export function DishCardSophhingCart({
             </button>
           </div>
           <span className="price-dish-card-shopping">
-            ${price * amountDish}
+            {calcular()}
           </span>
           <button
             className="delete-button"

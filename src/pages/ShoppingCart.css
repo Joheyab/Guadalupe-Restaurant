@@ -1,11 +1,13 @@
+.general-shopping-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .shopping-cart-container {
   display: flex;
   flex-direction: row;
   width: 55%;
   height: 80%;
-  margin-top: 80px;
-  margin-left: 450px;
-  margin-right: 100px;
   box-shadow: -2px 4px 17px 11px rgba(0, 0, 0, 0.25);
   -webkit-box-shadow: -2px 4px 17px 11px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: -2px 4px 17px 11px rgba(0, 0, 0, 0.25);
@@ -50,6 +52,7 @@
     flex-direction: column;
     gap: 20px;
     padding: 40px;
+    padding-right: 0px;
     padding-bottom: 0;
     position: absolute;
     width: 88%;
@@ -301,7 +304,89 @@
     opacity: 0.6;
 }
 
+@media only screen and (max-width: 1600px) {
+    .general-shopping-container{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .shopping-cart-container {
+        width: 65%;
+        height: 100%;
+      }
+  }
+  @media only screen and (max-height: 800px) {
+    .checkout-button{
+        margin-bottom: 20px;
+    }
+  }
 
+  @media only screen and (max-width: 1400px) {
+    .shopping-cart-container {
+        width: 65%;
+      }
+  }
+
+  @media only screen and (max-width: 480px) {
+    body{
+        background-color: aqua;
+    }
+    .general-shopping-container{
+        height: 1000px;
+    }
+    .shopping-cart-container{
+        flex-direction: column;
+        border-top-right-radius: 10px;
+        width: 90%;
+        height: 1000px;
+    }
+    .left-container{
+        width: 100%;
+        height: 50%;
+        border-top-right-radius: 10px;
+    }
+    .header-shopping-cart-container{
+        width: 500px;
+        padding: 20px 20px 10px;
+    }
+    .dishes-shopping-container{
+        padding: 30px 30px 10px 20px;
+    }
+
+    .dishes-card-shopping-cart{
+        width: 500px;
+        margin-right: 20px;
+    }
+    .right-container{
+        width: 100%;
+        padding: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+        box-shadow: 7px 1px 5px -2px rgb(0 0 0 / 43%);
+    -webkit-box-shadow: 7px 10px 5px -2px rgb(0 0 0 / 43%);
+    -moz-box-shadow: 7px 1px 5px -2px rgba(0, 0, 0, 0.43);
+    }
+    .header-checkout-container{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .summary-items-price{
+        margin-left: 20px;
+    margin-right: 20px;
+    }
+    .province{
+        margin-left: 20px;
+    margin-right: 20px;
+    }
+    .discount{
+        margin-left: 20px;
+    margin-right: 20px;
+    }
+    .footer-checkout-container{
+        margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    }
+  }
 
 
 
