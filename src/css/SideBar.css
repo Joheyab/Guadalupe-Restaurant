@@ -319,10 +319,11 @@ aside {
     z-index: 20;
     width: 100%;
     animation: none;
+    height: inherit;
   }
 
   .category-filters{
-    padding-bottom: 100px;
+    padding-bottom: 40px;
   }
   .close-filters-button{
     left: 55%;
