@@ -308,3 +308,32 @@ aside {
   margin-bottom: 0px;
 }
 }
+
+@media only screen and (max-width: 480px) {
+  .hidden-sideBar{
+    width: 100px;
+  }
+  
+  .sideBar{
+    position: absolute;
+    z-index: 20;
+    width: 100%;
+    animation: none;
+  }
+
+  .category-filters{
+    padding-bottom: 100px;
+  }
+  .close-filters-button{
+    left: 55%;
+    bottom: 60px;
+    transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  }
+
+  .search-button-filters{
+    border: none;
+  }
+}

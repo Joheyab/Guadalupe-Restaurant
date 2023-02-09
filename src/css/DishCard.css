@@ -122,3 +122,13 @@
     font-family: "Lobster", cursive;
     box-sizing: border-box;
   }
+
+  @media only screen and (max-width: 480px) {
+    .dish-card{
+      margin-left: 0;
+    }
+
+    .form-add-dish{
+      left: 18%;
+    }
+  }

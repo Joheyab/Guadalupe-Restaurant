@@ -45,11 +45,12 @@
   }
 
   @media only screen and (max-width: 480px) {
-    body{
-      background-color:antiquewhite;
-    }
     .dishes-menu-container{
-      width: 460px;
+      width: 420px;
+      margin-right: 40px;
+      margin-left: 20px;
     }
+
+   
 
   }

@@ -8,7 +8,8 @@ export function DishCard({ imagen, category, price, description, name }) {
   }
 
   const handleDecrement = () =>{
-    setAmountDish(amountDish - 1)
+    amountDish != 0 ? setAmountDish(amountDish - 1) : null
+    
   }
 
   const handleSubmit = (event) => {
