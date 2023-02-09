@@ -109,3 +109,21 @@
 
 
 
+@media only screen and (max-width: 480px){
+  .react-multi-carousel-track:first-child{
+    margin-left: 10px;
+  }
+  .third-container{
+    height: 600px;
+  }
+  .description-vegetables{
+    height: 212px;
+    width: auto;
+  }
+
+  .description-vegetables h1{
+    left: 0;
+    max-width: 320px;
+    font-size: 24px;
+  }
+}

@@ -31,4 +31,30 @@
     padding-top: 50px;
   }
 
-  
+  @media only screen and (max-width: 1600px) {
+    body{
+      background-color: red;
+    }
+    .dishes-menu-container{
+      width: 1120px;
+    }
+  }
+
+
+  @media only screen and (max-width: 1400px) {
+    body{
+      background-color: aqua;
+    }
+    .dishes-menu-container{
+      width: 760px;
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    body{
+      background-color:antiquewhite;
+    }
+    .dishes-menu-container{
+      width: 460px;
+    }
+  }
