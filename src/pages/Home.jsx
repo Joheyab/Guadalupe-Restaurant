@@ -71,7 +71,7 @@ export function Home() {
             <SliderCard
               imagen={"drink_5.webp"}
               category={"Drinks"}
-              price={"$5.50"}
+              price={"$3.00"}
             />
             <SliderCard
               imagen={"dish_7.webp"}

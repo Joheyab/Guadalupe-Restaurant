@@ -21,7 +21,7 @@
         "Image": "drink_1.webp",
         "Category": "Drinks",
         "Price": 3.00,
-        "Description": "Batido de fresa en leche"
+        "Description": "Milkshake of straweberrys from Poas"
     },
     {
         "ID": 4,
@@ -29,7 +29,7 @@
         "Image": "dish_3.webp",
         "Category": "Pastas",
         "Price": 8.50,
-        "Description": "RAMEN"
+        "Description": "Original ramen"
     },
     {
         "ID": 5,
@@ -37,7 +37,7 @@
         "Image": "dish_4.webp",
         "Category": "Hamburgers",
         "Price": 6,
-        "Description": "adadqdqw"
+        "Description": "Artesanal bread, beacon, chicken, lettuce, tomato and sauces"
     }
     ,
     {
@@ -46,7 +46,7 @@
         "Image": "dish_5.webp",
         "Category": "Sandwiches",
         "Price": 5.50,
-        "Description": "adasddaaqd"
+        "Description": "Oregano and Parmesan cheese bread, sweet chili, sauces, chicken and caramelized onion"
     },
     {
         "ID": 7,
@@ -54,7 +54,7 @@
         "Image": "dish_7.webp",
         "Category": "Desserts",
         "Price": 3.25,
-        "Description": "asdasqfqaefQ"
+        "Description": "Chocolate cake with natural cocoa"
     },
     {
         "ID": 8,
